@@ -15,10 +15,8 @@ It's a sina weibo (chinese twitter) spider written by golang golly
 
 使用
 
-完成上一步的使用准备工作后，可以下载release中的代码，在上方栏的release页中，分别有mac版与windows exe版本的压缩包，可以直接下载运行
-
 填写需要登陆的账号于account/account.txt中，每行一个账号，源码的account文件夹可以看到示例，双击login开始批量登陆（账号要选择免验证码的邮箱登陆的账号）
 
-在account/target.txt文件中，同样每行一个，写下要爬取的用户id，双击weibo_spider或weibo_spider.exe开始爬取
+在account/target.txt文件中，同样每行一个，写下要爬取的用户id
 
 希望大家不要涸泽而渔，release中的版本爬取间隔为10秒左右
