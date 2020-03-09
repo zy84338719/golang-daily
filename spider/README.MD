@@ -18,5 +18,3 @@ It's a sina weibo (chinese twitter) spider written by golang golly
 填写需要登陆的账号于account/account.txt中，每行一个账号，源码的account文件夹可以看到示例，双击login开始批量登陆（账号要选择免验证码的邮箱登陆的账号）
 
 在account/target.txt文件中，同样每行一个，写下要爬取的用户id
-
-希望大家不要涸泽而渔，release中的版本爬取间隔为10秒左右
