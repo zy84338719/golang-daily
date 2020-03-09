@@ -4,6 +4,7 @@ package rules
 import (
 	"fmt"
 	"github.com/gocolly/colly"
+	"github.com/prometheus/common/log"
 	"gopkg.in/mgo.v2"
 	"spider/mdb"
 	"spider/utils"
@@ -37,7 +38,7 @@ func SetFollowSeniorCallback(getFollowC *colly.Collector){
 		err := mdb.Insert(dbName, "Relationships", relationship)
 		if mgo.IsDup(err) {
 			//有重复数据
-			fmt.Println("already scrapy")
+			log.Error("already scrapy",err)
 		}
 	})
 }

@@ -50,6 +50,16 @@ func ScrapyFollow() {
 	}
 	getFollowC.Wait()
 }
+func ScrapySeniorFollow() {
+	getFollowC := rules.GetDefaultCollector()
+	rules.SetFollowSeniorCallback(getFollowC)
+	//read files
+	for _, uid := range uidLi {
+		url := rules.GetFollowerSeniorUrl(uid)
+		getFollowC.Visit(url)
+	}
+	getFollowC.Wait()
+}
 
 func ScrapyFans() {
 	getFansC := rules.GetDefaultCollector()

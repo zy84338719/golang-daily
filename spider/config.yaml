@@ -4,8 +4,9 @@ ACCOUNT_FILE: "/account/account.txt"
 DRIVER_PATH: "/browser/chromedriver"
 # 爬取类型
 SCRAPY_TYPE:
-  Info: True
-  Follow: True
+  Info: False
+  Follow: False
+  SeniorFollow: True
   Fans: True
   Tweet:
     Main: False

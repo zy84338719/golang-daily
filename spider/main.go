@@ -9,7 +9,7 @@ import (
 
 func main() {
 	var flag string
-	fmt.Printf("是否登录？yes or no")
+	fmt.Printf("是否登录？yes or no  ")
 	fmt.Scanf("%s",&flag)
 	if flag=="yes" {
 		err:= login.Login()
@@ -23,6 +23,9 @@ func main() {
 	}
 	if config.Conf.GetBool("SCRAPY_TYPE.Follow") {
 		scrapy.ScrapyFollow()
+	}
+	if config.Conf.GetBool("SCRAPY_TYPE.SeniorFollow") {
+		scrapy.ScrapySeniorFollow()
 	}
 	//修复去重问题
 	if config.Conf.GetBool("SCRAPY_TYPE.Fans") {

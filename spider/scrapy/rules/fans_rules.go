@@ -2,6 +2,7 @@ package rules
 import (
 	"fmt"
 	"github.com/gocolly/colly"
+	"github.com/prometheus/common/log"
 	"gopkg.in/mgo.v2"
 	"spider/mdb"
 	"spider/utils"
@@ -23,6 +24,7 @@ func SetFansCallback(getFansC *colly.Collector) {
 			}
 		}
 	})
+
 	getFansC.OnXML(`//a[text()="关注他" or text()="关注她" or text()="移除"]/@href`, func(element *colly.XMLElement) {
 		followUrl := element.Text
 		uid := utils.ReParse(`uid=(\d+)`, followUrl)
@@ -35,7 +37,7 @@ func SetFansCallback(getFansC *colly.Collector) {
 		err := mdb.Insert(dbName, "Relationships", relationship)
 		if mgo.IsDup(err) {
 			//有重复数据
-			fmt.Println("already scrapy")
+			log.Info("already scrapy",relationship)
 		}
 	})
 }
