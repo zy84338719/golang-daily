@@ -1,0 +1,3 @@
+[submodule "resume-go"]
+	path = resume-go
+	url = git@github.com:MurphyTechnology/resume-go.git
