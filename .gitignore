@@ -1,3 +1,11 @@
 # Default ignored files
 /workspace.xml
 .idea/
+/resumeapi/.idea/*
+/.vscode/launch.json
+/resumeapi/.idea/misc.xml
+/resumeapi/.idea/modules.xml
+/resumeapi/.idea/resumeapi.iml
+/test/test
+/resumeapi/.idea/vcs.xml
+/resumeapi/.idea/workspace.xml
