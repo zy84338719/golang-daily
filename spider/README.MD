@@ -1,4 +1,4 @@
-It's a sina weibo (chinese twitter) spider written by golang golly
+这是一个微博爬虫，希望大家善用！！！方便大家了解一个人。哈哈哈哈
 
 可以双击运行的微博爬虫
 使用准备
